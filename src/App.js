@@ -2,6 +2,7 @@ import React from 'react';
 import NavHeader from './content/navBlock/NavHeader';
 import HeaderSearch from './content/headerSearchBlock/HeaderSearch';
 import Header from './content/headerBlock/Header';
+import Footer from './content/footerBlock/footer';
 import HomePage from './content/headerBlock/HomePage';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './content/navBlock/Login';
@@ -13,6 +14,7 @@ import NewBook from './content/headerBlock/NewBook';
 import Auction from './content/headerBlock/Auction';
 import Community from './content/headerBlock/Community';
 
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
         <NavHeader />
         <HeaderSearch></HeaderSearch>
         <Header></Header>
+
         <Route exact path="/" component={HomePage} />
         <Route exact path="/customer-service" component={CustomerService} />
         <Route exact path="/register" component={Register} />
@@ -30,6 +33,9 @@ function App() {
         <Route exact path="/newBook" component={NewBook} />
         <Route exact path="/auction" component={Auction} />
         <Route exact path="/community" component={Community} />
+
+        <Footer></Footer>
+
     </div>
     </Router>
   );
