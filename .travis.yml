@@ -1,7 +1,7 @@
 language: node_js
-node_js: 
- - "6.14.4"
-install: 
- - npm install
+node_js:
+- "stable"
+before_script:
+- npm install
 script:
- - npm start
+- npm run build
